@@ -1,4 +1,3 @@
-
 ---
 version: 2.1
 
@@ -6,22 +5,24 @@ defaults: &defaults
   docker:
     - image: greenpeaceinternational/p4-builder:latest
 
+orbs:
+  slack: circleci/slack@3.4.2
 job_environments:
-  common_environment: &common_environment
-    APP_HOSTPATH: test-oberon
-    CONTAINER_PREFIX: planet4-test-oberon
-    WP_DB_NAME_PREFIX: planet4-test-oberon_wordpress
-  develop_environment: &develop_environment
-    APP_ENVIRONMENT: development
-    APP_HOSTNAME: k8s.p4.greenpeace.org
-    CLOUDSQL_INSTANCE: p4-develop-k8s
-    GOOGLE_PROJECT_ID: planet-4-151612
-    GCLOUD_CLUSTER: p4-development
-    HELM_NAMESPACE: develop
-    HELM_RELEASE: planet4-test-oberon
-    NEWRELIC_APPNAME: P4 test-oberon Development
-    WP_DB_NAME: planet4-test-oberon_wordpress_develop
-    WP_STATELESS_BUCKET: planet4-test-oberon-stateless-develop
+    common_environment: &common_environment
+      APP_HOSTPATH: test-oberon
+      CONTAINER_PREFIX: planet4-test-oberon
+      WP_DB_NAME_PREFIX: planet4-test-oberon_wordpress
+    develop_environment: &develop_environment
+      APP_ENVIRONMENT: development
+      APP_HOSTNAME: k8s.p4.greenpeace.org
+      CLOUDSQL_INSTANCE: p4-develop-k8s
+      GOOGLE_PROJECT_ID: planet-4-151612
+      GCLOUD_CLUSTER: p4-development
+      HELM_NAMESPACE: develop
+      HELM_RELEASE: planet4-test-oberon
+      NEWRELIC_APPNAME: P4 test-oberon Development
+      WP_DB_NAME: planet4-test-oberon_wordpress_develop
+      WP_STATELESS_BUCKET: planet4-test-oberon-stateless-develop
 job_definitions:
   visualtests_reference_steps: &visualtests_reference_steps
     docker:
