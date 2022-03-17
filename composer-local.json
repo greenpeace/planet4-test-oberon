@@ -3,7 +3,7 @@
 	"description": "Greenpeace P4 test-oberon",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-master",
+		"greenpeace/planet4-master-theme": "7",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "7"
 	},
 	"scripts": {
@@ -22,6 +22,30 @@
 				"dist": {
 					"type": "zip",
 					"url": "https://storage.googleapis.com/planet4-packages/planet4-plugin-gutenberg-blocks/4db5d427927b4b7dc5a55c86c9e5c35898ad100a.zip"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "greenpeace/planet4-master-theme",
+				"type": "wordpress-theme",
+				"autoload": {
+					"psr-4": {
+						"P4\\MasterTheme\\": "src/"
+					}
+				},
+				"extra": {
+					"installer-paths": {
+						"vendor/plugins/{$name}/": [
+							"type:wordpress-plugin"
+						]
+					}
+				},
+				"version": 7,
+				"dist": {
+					"type": "zip",
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/6e443e964aa7f174740fba34fc28381a11fc641e.zip"
 				}
 			}
 		}
