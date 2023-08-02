@@ -38,6 +38,7 @@ job_environments:
     APP_HOSTPATH: test-oberon
     CONTAINER_PREFIX: planet4-test-oberon
     WP_DB_NAME_PREFIX: planet4-test-oberon_wordpress
+    PARENT_VERSION: add-sendgrid-api-key
   develop_environment: &develop_environment
     APP_ENVIRONMENT: development
     APP_HOSTNAME: www-dev.greenpeace.org
@@ -48,6 +49,7 @@ job_environments:
     HELM_RELEASE: planet4-test-oberon
     WP_DB_NAME: planet4-test-oberon_wordpress_develop
     WP_STATELESS_BUCKET: planet4-test-oberon-stateless-develop
+    PARENT_VERSION: add-sendgrid-api-key
 
 
 commands:
