@@ -9,7 +9,7 @@
 	"scripts": {
 		"core:language": "wp language core install pt_BR; wp language core activate pt_BR",
 		"site:custom" : [
-			"@core:language",
+			"@core:language"
 		]
 	}
 }
