@@ -5,5 +5,11 @@
 	"require": {
 		"greenpeace/planet4-master-theme": "dev-main",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-main"
+	},
+	"scripts": {
+		"core:language": "wp language core install pt_BR; wp language core activate pt_BR",
+		"site:custom" : [
+			"@core:language",
+		]
 	}
 }
