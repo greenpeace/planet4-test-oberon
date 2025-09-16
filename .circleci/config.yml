@@ -48,8 +48,6 @@ job_environments:
     HELM_RELEASE: planet4-test-oberon
     WP_DB_NAME: planet4-test-oberon_wordpress_develop
     WP_STATELESS_BUCKET: planet4-test-oberon-stateless-develop
-    PARENT_VERSION: sentry
-
 
 commands:
   approve_job:
