@@ -26,7 +26,7 @@
 		}
 	],
 	"scripts": {
-		"install:gravityforms": "wp plugin install --force --activate https://storage.googleapis.com/planet4-3rdparty-plugins/gravityforms_3.0.1.zip",
+		"install:gravityforms": "wp plugin install --force --activate https://storage.googleapis.com/planet4-3rdparty-plugins/gravityforms_3.1.1.2.zip",
 		"site:custom": [
 			"@install:gravityforms"
 		]
