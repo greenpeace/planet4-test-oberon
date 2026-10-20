@@ -3,12 +3,32 @@
 	"description": "Greenpeace P4 test-oberon",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-main"
+		"greenpeace/planet4-master-theme": "7"
 	},
 	"scripts": {
 		"install:gravityforms": "wp plugin install --force --activate https://storage.googleapis.com/planet4-3rdparty-plugins/gravityforms_3.1.1.2.zip",
 		"site:custom": [
 			"@install:gravityforms"
 		]
-	}
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "greenpeace/planet4-master-theme",
+				"type": "wordpress-theme",
+				"autoload": {
+					"psr-4": {
+						"P4\\MasterTheme\\": "src/"
+					}
+				},
+				"extra": null,
+				"version": 7,
+				"dist": {
+					"type": "zip",
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/ea1e45d0d11fb42ae993294d07edbd8fa79aad50.zip"
+				}
+			}
+		}
+	]
 }
